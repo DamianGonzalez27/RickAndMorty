@@ -1,38 +1,123 @@
-.App {
+/*
+  Poner todas las propiedades de html son margin ni pading desde el principio de los estilos
+*/
+figure 
+{
+  margin: 0;
+}
+.App 
+{
   text-align: center;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+/*
+  Flexbox es un patron de diseño para ordenar los estiloss
+*/
+.principal
+{
+  color: white;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  height: 100%;
+  display: flex; 
   flex-direction: column;
   align-items: center;
+  padding: 5px;
+}
+
+.cards-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: centers;
+  justify-content: space-evenlys;
+  font-size: calc(10px + 2vmin);
+}
+
+.card
+{
+  background-color: #282c34;
+  border: solid 1px white;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 5px;
+}
+.card:hover
+{
+  cursor: pointer;
+
+}
+
+.card-image figure img
+{
+  border-radius: 10px;
+}
+.card-image figure img:hover
+{
+  filter: hue-rotate(90deg);
+}
+
+.card-description
+{
+  padding: 0 30px;
+}
+.name
+{
+  white-space: nowrap;
+  overflow: hidden;
+}
+.modal
+{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-detalle
+{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
   font-size: calc(10px + 2vmin);
   color: white;
+  top: 0;
+}
+.card-descripcion
+{
+  width: 100%;
+  padding: 30px;
+}
+.caracteristicas
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.caracteristicas p 
+{
+  margin: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.caracteristica-valor
+{
+  color: #17ff75
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 570px)
+{
+  .cards-container
+  {
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .card-detalle
+  {
+    flex-direction: column;
   }
 }
+
